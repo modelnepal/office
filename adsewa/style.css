@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px; /* Account for fixed header */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('hero-background.jpg') center/cover;
+    min-height: 600px;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    background-color: #2962ff;
+    border-color: #2962ff;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #1e4bd8;
+    border-color: #1e4bd8;
+}
+
+/* Section Spacing */
+section {
+    padding: 80px 0;
+}
+
+/* Navbar Customization */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+    }
+} 
+
+/* Services Section */
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Newsletter Section */
+#newsletter {
+    background: linear-gradient(45deg, #2962ff, #1e4bd8);
+}
+
+/* Contact Section */
+.contact-info a {
+    color: #2962ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1e4bd8;
+}
+
+/* Footer */
+footer a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .contact-info {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+} 
