@@ -1,11 +1,3 @@
-
-    
-<?php
-// Include the header section
-// include('header.php');
-?>
-
-
 <?php
     $site_name = "Khet";
     $tagline = "Smart Farming Solutions";
@@ -192,6 +184,237 @@
                 margin: 10px 0;
             }
         }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .feature-slider {
+                padding: 60px 0;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-nav {
+                padding: 20px 0;
+            }
+
+            .nav-link {
+                padding: 10px 20px !important;
+            }
+
+            .navbar .btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .feature-card {
+                margin: 10px;
+            }
+
+            .footer {
+                padding: 60px 0 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            .feature-slider {
+                padding: 40px 0;
+            }
+
+            .feature-card {
+                margin: 10px 0;
+            }
+
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+            .footer [class*="col-"] {
+                margin-bottom: 30px;
+            }
+
+            .social-links {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                height: 30px;
+            }
+
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .display-4 {
+                font-size: 2rem;
+            }
+
+            .display-5 {
+                font-size: 1.8rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+            }
+
+            .btn-lg {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .contact-form {
+                padding: 20px 15px;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .footer-links {
+                margin-bottom: 20px;
+            }
+
+            .app-download-buttons {
+                flex-direction: column;
+            }
+
+            .app-download-buttons .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Additional Responsive Utilities */
+        .text-sm-center {
+            text-align: center !important;
+        }
+
+        .mb-sm-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .px-sm-3 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            margin-top: 76px; /* Adjust based on your navbar height */
+        }
+
+        .carousel-item {
+            height: calc(100vh - 76px);
+            min-height: 400px;
+            background: #000;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .carousel-link {
+            text-decoration: none;
+            color: white;
+        }
+
+        .carousel-indicators {
+            margin-bottom: 3rem;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            opacity: 0.7;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Carousel Styles */
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 70vh;
+            }
+
+            .carousel-caption {
+                padding: 1rem;
+                bottom: 50%;
+            }
+
+            .carousel-caption h2 {
+                font-size: 2rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .carousel-caption .btn {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item {
+                height: 60vh;
+            }
+
+            .carousel-caption h2 {
+                font-size: 1.5rem;
+            }
+
+            .carousel-caption p {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -227,9 +450,72 @@
         </div>
     </nav>
 
+    <!-- Carousel Section -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <?php
+            $carousel_items = [
+                [
+                    'image' => 'https://source.unsplash.com/1600x900/?farming,technology',
+                    'title' => 'Smart Farming Solutions',
+                    'description' => 'Transform your agriculture with technology',
+                    'link' => '#features'
+                ],
+                [
+                    'image' => 'https://source.unsplash.com/1600x900/?agriculture,digital',
+                    'title' => 'Real-time Crop Monitoring',
+                    'description' => 'Track your crops growth and health instantly',
+                    'link' => '#monitoring'
+                ],
+                [
+                    'image' => 'https://source.unsplash.com/1600x900/?farm,modern',
+                    'title' => 'Market Price Updates',
+                    'description' => 'Get latest market prices for better decisions',
+                    'link' => '#prices'
+                ]
+            ];
+
+            foreach ($carousel_items as $index => $item): ?>
+                <button type="button" 
+                        data-bs-target="#mainCarousel" 
+                        data-bs-slide-to="<?php echo $index; ?>" 
+                        <?php echo $index === 0 ? 'class="active"' : ''; ?>
+                        aria-label="Slide <?php echo $index + 1; ?>">
+                </button>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="carousel-inner">
+            <?php foreach ($carousel_items as $index => $item): ?>
+                <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                    <a href="<?php echo $item['link']; ?>" class="carousel-link">
+                        <img src="<?php echo $item['image']; ?>" class="d-block w-100" alt="<?php echo $item['title']; ?>">
+                        <div class="carousel-caption">
+                            <h2 class="display-4 fw-bold mb-3"><?php echo $item['title']; ?></h2>
+                            <p class="lead mb-4"><?php echo $item['description']; ?></p>
+                            <button class="btn btn-success btn-lg rounded-pill px-4 py-2">
+                                Learn More
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <!-- Features Section with Slider -->
     <section id="features" class="feature-slider">
-        <div class="container">
+        <div class="container px-sm-3">
             <div class="text-center mb-5">
                 <h2 class="display-5 fw-bold">Amazing Features</h2>
                 <p class="lead text-muted">Discover what makes our app special</p>
@@ -279,12 +565,12 @@
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
+        <div class="container px-sm-3">
             <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
+                <div class="col-lg-8 col-md-10 text-center">
                     <h2 class="display-4 fw-bold mb-4">Ready to Transform Your Farming?</h2>
-                    <p class="lead mb-4">Join thousands of farmers who are already using our app to improve their yields and profits</p>
-                    <a href="#download" class="btn btn-light btn-lg rounded-pill px-5 py-3">
+                    <p class="lead mb-4">Join thousands of farmers who are already using our app</p>
+                    <a href="#download" class="btn btn-light btn-lg rounded-pill px-md-5 py-md-3 px-4 py-2">
                         Get Started Now
                         <i class="fas fa-arrow-right ms-2"></i>
                     </a>
@@ -295,9 +581,9 @@
 
     <!-- Contact Form -->
     <section id="contact" class="py-5">
-        <div class="container">
+        <div class="container px-sm-3">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-md-10">
                     <div class="contact-form">
                         <div class="text-center mb-5">
                             <h2 class="h1 fw-bold">Get in Touch</h2>
@@ -337,9 +623,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="container px-sm-3">
             <div class="row g-4">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <img src="assets/images/logo-white.png" alt="<?php echo $site_name; ?>" height="40" class="mb-4">
                     <p class="text-light opacity-75">Empowering farmers with smart technology for better farming practices and improved yields.</p>
                     <div class="social-links mt-4">
@@ -381,10 +667,10 @@
             </div>
             <hr class="mt-5 mb-4 border-light opacity-10">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <p class="mb-0 text-light opacity-75">&copy; <?php echo date('Y'); ?> <?php echo $site_name; ?>. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <div class="col-md-6 text-center text-md-end">
                     <a href="#" class="text-light opacity-75 me-3">Privacy Policy</a>
                     <a href="#" class="text-light opacity-75">Terms of Service</a>
                 </div>
@@ -412,15 +698,22 @@
                 el: '.swiper-pagination',
             },
             breakpoints: {
-                640: {
+                320: {
                     slidesPerView: 1,
+                    spaceBetween: 20
                 },
-                768: {
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                640: {
                     slidesPerView: 2,
+                    spaceBetween: 30
                 },
-                1024: {
+                992: {
                     slidesPerView: 3,
-                },
+                    spaceBetween: 40
+                }
             }
         });
 
@@ -432,13 +725,16 @@
                 document.querySelector('.navbar').classList.remove('scrolled');
             }
         });
+
+        // Initialize carousel with auto-scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = new bootstrap.Carousel(document.getElementById('mainCarousel'), {
+                interval: 5000, // Change slide every 5 seconds
+                wrap: true,    // Continuous loop
+                keyboard: true, // Keyboard control
+                pause: 'hover' // Pause on hover
+            });
+        });
     </script>
 </body>
 </html> 
-
-
-
-<?php
-// Include the header section
-// include('footer.php');
-?>
