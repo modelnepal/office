@@ -1,3 +1,11 @@
+
+    
+<?php
+// Include the header section
+// include('header.php');
+?>
+
+
 <?php
     $site_name = "Khet";
     $tagline = "Smart Farming Solutions";
@@ -738,3 +746,8 @@
     </script>
 </body>
 </html> 
+
+<?php
+// Include the header section
+// include('footer.php');
+?>
