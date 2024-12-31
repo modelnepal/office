@@ -6,7 +6,6 @@
 ?>
 
 
-
 <?php
     $site_name = "Khet";
     $tagline = "Smart Farming Solutions";
@@ -30,122 +29,211 @@
             --light-bg: #F1F8E9;
         }
 
-        .carousel-item {
-            height: 100vh;
-            min-height: 300px;
-            background: no-repeat center center scroll;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+        /* Header Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: all 0.3s ease;
         }
 
-        .carousel-caption {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+        .navbar.scrolled {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
+        .navbar-brand img {
+            height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link.active {
+            color: var(--primary-color) !important;
+            background: var(--light-bg);
+            border-radius: 20px;
+        }
+
+        /* Feature Slider Styles */
         .feature-slider {
-            padding: 50px 0;
+            padding: 80px 0;
+            background: var(--light-bg);
         }
 
         .feature-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 30px;
             margin: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .feature-icon {
-            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
             color: var(--primary-color);
-            margin-bottom: 20px;
         }
 
+        /* CTA Section Styles */
         .cta-section {
-            background: linear-gradient(rgba(76, 175, 80, 0.9), rgba(46, 125, 50, 0.9)),
-                        url('assets/images/farm-bg.jpg') center/cover;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 100px 0;
             color: white;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('assets/images/pattern.png') repeat;
+            opacity: 0.1;
+        }
+
+        /* Contact Form Styles */
         .contact-form {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .swiper-container {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
+        .form-control {
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
         }
 
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 300px;
-            height: 300px;
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-link {
+                padding: 12px 20px !important;
+            }
+
+            .feature-card {
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Carousel -->
-    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <?php
-            $carousel_items = [
-                [
-                    'image' => 'https://source.unsplash.com/1600x900/?farming',
-                    'title' => 'Smart Farming Solutions',
-                    'description' => 'Transform your farming with technology'
-                ],
-                [
-                    'image' => 'https://source.unsplash.com/1600x900/?agriculture',
-                    'title' => 'Track Your Crops',
-                    'description' => 'Monitor growth and health in real-time'
-                ],
-                [
-                    'image' => 'https://source.unsplash.com/1600x900/?farm',
-                    'title' => 'Market Insights',
-                    'description' => 'Get the best prices for your produce'
-                ]
-            ];
-
-            foreach ($carousel_items as $index => $item): ?>
-                <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
-                    <img src="<?php echo $item['image']; ?>" class="d-block w-100" alt="<?php echo $item['title']; ?>">
-                    <div class="carousel-caption">
-                        <h2><?php echo $item['title']; ?></h2>
-                        <p><?php echo $item['description']; ?></p>
-                        <a href="#download" class="btn btn-success btn-lg">Get Started</a>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-
-    <!-- Features Slider -->
-    <section class="feature-slider">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <h2 class="text-center mb-5">Key Features</h2>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="<?php echo $site_name; ?>">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#download" class="btn btn-success rounded-pill px-4">Download App</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Features Section with Slider -->
+    <section id="features" class="feature-slider">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Amazing Features</h2>
+                <p class="lead text-muted">Discover what makes our app special</p>
+            </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php
@@ -178,8 +266,8 @@
                                 <div class="feature-icon">
                                     <i class="<?php echo $feature['icon']; ?>"></i>
                                 </div>
-                                <h3><?php echo $feature['title']; ?></h3>
-                                <p><?php echo $feature['description']; ?></p>
+                                <h3 class="h5 mb-3"><?php echo $feature['title']; ?></h3>
+                                <p class="text-muted mb-0"><?php echo $feature['description']; ?></p>
                             </div>
                         </div>
                     <?php endforeach; ?>
@@ -192,38 +280,54 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="mb-4">Ready to Transform Your Farming?</h2>
-            <p class="lead mb-4">Join thousands of farmers who are already using Khet to improve their yields and profits</p>
-            <a href="#download" class="btn btn-light btn-lg">Download Now</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bold mb-4">Ready to Transform Your Farming?</h2>
+                    <p class="lead mb-4">Join thousands of farmers who are already using our app to improve their yields and profits</p>
+                    <a href="#download" class="btn btn-light btn-lg rounded-pill px-5 py-3">
+                        Get Started Now
+                        <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section class="py-5 bg-light">
+    <section id="contact" class="py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <div class="contact-form">
-                        <h2 class="text-center mb-4">Get in Touch</h2>
+                        <div class="text-center mb-5">
+                            <h2 class="h1 fw-bold">Get in Touch</h2>
+                            <p class="text-muted">Have questions? We'd love to hear from you.</p>
+                        </div>
                         <form action="process.php" method="POST">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select">
+                                        <option selected>Select Subject</option>
+                                        <option>General Inquiry</option>
+                                        <option>Technical Support</option>
+                                        <option>Feedback</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success btn-lg w-100 rounded-pill">
+                                        Send Message
+                                    </button>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select" name="subject" required>
-                                    <option value="">Select Subject</option>
-                                    <option>General Inquiry</option>
-                                    <option>Technical Support</option>
-                                    <option>Feedback</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -232,49 +336,57 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5>About <?php echo $site_name; ?></h5>
-                    <p>Empowering farmers with smart technology for better farming practices and improved yields.</p>
-                    <div class="social-links">
-                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="assets/images/logo-white.png" alt="<?php echo $site_name; ?>" height="40" class="mb-4">
+                    <p class="text-light opacity-75">Empowering farmers with smart technology for better farming practices and improved yields.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#features" class="text-light">Features</a></li>
-                        <li><a href="#download" class="text-light">Download App</a></li>
-                        <li><a href="#blog" class="text-light">Blog</a></li>
-                        <li><a href="#contact" class="text-light">Contact</a></li>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <h5>Download App</h5>
-                    <div class="app-buttons">
-                        <a href="#" class="btn btn-light mb-2 me-2">
-                            <i class="fab fa-apple me-2"></i>App Store
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white mb-4">Resources</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white mb-4">Download App</h5>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="#" class="btn btn-light">
+                            <i class="fab fa-apple me-2"></i>Download on App Store
                         </a>
-                        <a href="#" class="btn btn-light mb-2">
-                            <i class="fab fa-google-play me-2"></i>Google Play
+                        <a href="#" class="btn btn-light">
+                            <i class="fab fa-google-play me-2"></i>Get it on Google Play
                         </a>
                     </div>
                 </div>
             </div>
-            <hr class="my-4">
+            <hr class="mt-5 mb-4 border-light opacity-10">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; <?php echo date('Y'); ?> <?php echo $site_name; ?>. All rights reserved.</p>
+                    <p class="mb-0 text-light opacity-75">&copy; <?php echo date('Y'); ?> <?php echo $site_name; ?>. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-light me-3">Privacy Policy</a>
-                    <a href="#" class="text-light me-3">Terms of Service</a>
-                    <a href="#" class="text-light">Cookie Policy</a>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-light opacity-75 me-3">Privacy Policy</a>
+                    <a href="#" class="text-light opacity-75">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -283,6 +395,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        // Initialize Swiper
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
             grabCursor: true,
@@ -298,6 +411,26 @@
             pagination: {
                 el: '.swiper-pagination',
             },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
         });
     </script>
 </body>
