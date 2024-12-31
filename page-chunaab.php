@@ -1381,5 +1381,5 @@ $features = [
 </html> 
 <?php
 // Include the header section
-// include('footer.php');
+include('footer.php');
 ?>
