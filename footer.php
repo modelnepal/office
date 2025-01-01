@@ -10,14 +10,13 @@
  */
 
 ?>
-
-
 <style>
 	
         /* Footer Styles */
         .footer-section {
             background: linear-gradient(to right, #1a1c20, #2d3436);
-            position: relative;
+            /* position: relative; */
+            margin-top: 83px;
         }
 
         .footer-title {
@@ -227,3 +226,8 @@
             </div>
         </div>
     </footer>
+
+
+<?php
+
+?>
