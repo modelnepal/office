@@ -2,7 +2,7 @@
     
 <?php
 // Include the header section
-// include('header.php');
+include('header.php');
 ?>
 
 
