@@ -12,7 +12,12 @@
  * @package domain
  */
 
-get_header();
+ // Include the header section
+ include('header.php');
+ ?>
+<?php
+    $site_name = "Cyberpur Lokbidhi";
+    $site_url = "http://localhost/aipik";
 ?>
 
 	<main id="primary" class="site-main">
@@ -52,6 +57,8 @@ get_header();
 
 	</main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+
+	<?php
+// Include the header section
+include('footer.php');
+?>

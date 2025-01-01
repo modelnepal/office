@@ -10,6 +10,8 @@
  */
 
 ?>
+
+
 <style>
 	
         /* Footer Styles */
@@ -225,8 +227,3 @@
             </div>
         </div>
     </footer>
-
-
-<?php
-
-?>
