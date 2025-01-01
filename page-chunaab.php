@@ -2,7 +2,7 @@
     
 <?php
 // Include the header section
-// include('header.php');
+include('header.php');
 ?>
 
 <?php
@@ -63,9 +63,7 @@ $features = [
 // Add custom styles specific to Chunaab
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($site_name) ?> - <?= htmlspecialchars($tagline) ?></title>
@@ -1118,89 +1116,7 @@ $features = [
         </div>
     </div>
 
-    <!-- Enhanced Footer Section -->
-    <footer class="footer-section bg-dark text-light py-5">
-        <div class="container">
-            <!-- Main Footer Content -->
-            <div class="row g-4 mb-5">
-                <!-- Company Info -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-about">
-                        <img src="assets/images/logo-light.png" alt="Chunaab" class="footer-logo mb-4" height="40">
-                        <p class="text-light-gray mb-4">Your trusted platform for democratic participation. Making elections transparent, accessible, and efficient for everyone.</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#elections">Elections</a></li>
-                        <li><a href="#candidates">Candidates</a></li>
-                        <li><a href="#results">Results</a></li>
-                        <li><a href="#faqs">FAQs</a></li>
-                    </ul>
-                </div>
-
-                <!-- Voter Resources -->
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="footer-title">Voter Resources</h5>
-                    <ul class="footer-links">
-                        <li><a href="#register">Voter Registration</a></li>
-                        <li><a href="#guide">Voting Guide</a></li>
-                        <li><a href="#locations">Polling Locations</a></li>
-                        <li><a href="#calendar">Election Calendar</a></li>
-                        <li><a href="#support">Support Center</a></li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-title">Stay Updated</h5>
-                    <p class="text-light-gray mb-4">Subscribe to our newsletter for election updates and important announcements.</p>
-                    <form class="footer-newsletter">
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Your email address" required>
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
-                        </div>
-                    </form>
-                    <div class="download-apps mt-4">
-                        <h6 class="mb-3">Get Our App</h6>
-                        <div class="app-buttons">
-                            <a href="#" class="app-btn me-2">
-                                <i class="fab fa-google-play"></i> Google Play
-                            </a>
-                            <a href="#" class="app-btn">
-                                <i class="fab fa-apple"></i> App Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Info -->
-            <div class="row py-4 border-top border-secondary">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#terms" class="text-light-gray text-decoration-none">Terms of Service</a>
-                        <a href="#privacy" class="text-light-gray text-decoration-none">Privacy Policy</a>
-                        <a href="#cookies" class="text-light-gray text-decoration-none">Cookie Policy</a>
-                        <a href="#accessibility" class="text-light-gray text-decoration-none">Accessibility</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0 text-light-gray">© <?= date('Y') ?> <?= htmlspecialchars($site_name) ?>. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+  
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1273,7 +1189,7 @@ $features = [
 
         // Animate Timeline Items
         const observerOptions = {
-            threshold: 0.5
+            threshold: 0.2
         };
 
         const observer = new IntersectionObserver(entries => {
@@ -1377,8 +1293,7 @@ $features = [
             updateListGroup();
         });
     </script>
-</body>
-</html> 
+
 <?php
 // Include the header section
 include('footer.php');
